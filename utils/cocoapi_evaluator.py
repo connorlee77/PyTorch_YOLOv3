@@ -38,7 +38,7 @@ class COCOAPIEvaluator():
                                    json_file='instances_val2017.json',
                                    name='val2017')
         self.dataloader = torch.utils.data.DataLoader(
-            self.dataset, batch_size=1, shuffle=False, num_workers=0)
+            self.dataset, batch_size=4, shuffle=False, num_workers=4)
         self.img_size = img_size
         self.confthre = 0.005 # from darknet
         self.nmsthre = nmsthre # 0.45 (darknet)
